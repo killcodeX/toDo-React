@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap');
 
 .section{
-    background-color: #f2f2f5;
+    background-image: linear-gradient(#00000060, #00000060), url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 150px;
     min-height: 90vh;
+    /* filter: brightness(50%); */
+    /* background-blend-mode: lighten; */
 }
 
 .navbar-brand{
@@ -17,11 +21,24 @@
 
 /* ----------------------------------------- AddTodo ----------------------------------------- */
 
-.submit-btn{
-    /* margin-top: 20px; */
-    width:500px;
+#addtodo{
+    width: 500px;
     position: relative;
     left:25%;
+}
+
+form{
+    display: flex;
+}
+
+.input{
+    width: 370px;
+}
+
+.submit-btn{
+    margin-left: 20px;
+    /* width:500px;
+     */
 }
 
 /* ----------------------------------------- Todo ----------------------------------------- */

@@ -21,10 +21,9 @@ export default function Add() {
 
     return (
         <>
-            <div className='box'>
+            <div className='box' id='addtodo'>
                 <form onSubmit={acceptValues}>
                     <div className="field">
-                        <label className="label">Enter Todo</label>
                         <div className="control has-icons-left has-icons-right">
                             <input className="input" type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter description..." />
                             <span className="icon is-small is-left">
