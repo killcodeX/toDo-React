@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap');
+
+.section{
+    background-color: #f2f2f5;
+    padding-bottom: 150px;
+    min-height: 90vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-brand{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-family: 'Lobster', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* ----------------------------------------- AddTodo ----------------------------------------- */
+
+.submit-btn{
+    margin-top: 20px;
+    width:500px;
+    position: relative;
+    left:25%;
+}
+
+
+/* ----------------------------------------- Footer ------------------------------------------------- */
+
+.footer{
+    margin-top: -54px;
+    padding: 1rem;
+    background-color: #0A192F;
+    color: #fff !important;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .footer a{
+    color: #fff;
+    margin-left: 5px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
