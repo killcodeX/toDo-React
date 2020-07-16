@@ -24,6 +24,42 @@
     left:25%;
 }
 
+/* ----------------------------------------- AddTodo ----------------------------------------- */
+
+#todolist{
+    width:500px;
+    position: relative;
+    left:25%;
+}
+
+.todo-display{
+    display: flex;
+    justify-content: space-between;
+    font-family: poppins;
+}
+
+.done-btn{
+    background-color: #11BF8B;
+    color: #fff;
+}
+
+.delete{
+    background-color: #FF4F5B;
+    position: absolute;
+    left:-30px;
+    top: 24px;
+    opacity: 0;
+}
+
+#todolist:hover .delete{
+    opacity: 1;
+    background-color: #FF4F5B;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
 
 /* ----------------------------------------- Footer ------------------------------------------------- */
 
