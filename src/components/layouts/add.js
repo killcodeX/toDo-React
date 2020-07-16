@@ -5,18 +5,18 @@ export default function Add() {
 
     const { addTodo } = useContext(GlobalContext);
 
-    const [ text, setText ] = useState('');
+    const [ desc, setDesc ] = useState('');
 
     let acceptValues = (e) => {
         e.preventDefault();
          const newtodo = {
             id : Math.floor(Math.random() * 100000),
-            text,
+            desc
         }
 
         addTodo(newtodo);
 
-        setText('')
+        setDesc('')
     }
 
     return (
@@ -25,7 +25,7 @@ export default function Add() {
                 <form onSubmit={acceptValues}>
                     <div className="field">
                         <div className="control has-icons-left has-icons-right">
-                            <input className="input" type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter description..." />
+                            <input className="input" type="text" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Enter description..." />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-keyboard"></i>
                             </span>
