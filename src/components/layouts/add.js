@@ -1,28 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../context/stateManager';
 
 export default function Add() {
 
-    const [addtodo, setAddtodo ] = useState('');
+    const { addTodo } = useContext(GlobalContext);
 
-    const submit = (e) => {
-        e.preventDefaut();
+    const [ text, setText ] = useState('');
+
+    let acceptValues = (e) => {
+        e.preventDefault();
+         const newtodo = {
+            id : Math.floor(Math.random() * 100000),
+            text,
+        }
+
+        addTodo(newtodo);
+
+        setText('')
     }
 
     return (
         <>
             <div className='box'>
-                <form onSubmit={submit}>
-                    <div class="field">
-                        <label class="label">Enter Todo</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="text" value={addtodo} onChange={(e) => setAddtodo(e.target.value)} placeholder="Enter todo..." />
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-keyboard"></i>
+                <form onSubmit={acceptValues}>
+                    <div className="field">
+                        <label className="label">Enter Todo</label>
+                        <div className="control has-icons-left has-icons-right">
+                            <input className="input" type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter description..." />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-keyboard"></i>
                             </span>
                         </div>
                     </div>
+                    <button className='button submit-btn is-link' type='submit'>Add</button>
                 </form>
-                <button className='button submit-btn is-link' type='submit'>Add</button>
             </div>
         </>
     )
